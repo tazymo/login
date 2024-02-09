@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Website Access</title>
     <style>
         body {
             background: url('/wp9361318-cartoon-nature-4k-wallpapers.jpg') no-repeat center center fixed;
@@ -14,17 +14,17 @@
             font-family: Arial, sans-serif;
         }
 
-        .login-container {
+        .access-container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
 
-        .login-box {
+        .access-box {
             border: 0px solid transparent;
             border-radius: 15px;
-            height: 500px;
+            height: 300px;
             width: 500px;
             background-color: rgba(125, 160, 196, 0.7);
             padding: 20px;
@@ -34,19 +34,8 @@
             color: white;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        input {
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 8px;
-            margin: 5px 0;
-            width: 100%;
-            box-sizing: border-box;
+        p {
+            margin-bottom: 20px;
         }
 
         button {
@@ -56,36 +45,21 @@
             padding: 10px;
             border-radius: 10px;
             cursor: pointer;
-            margin-top: 10px;
-        }
-
-        label {
-            align-self: flex-start;
-            margin: 10px 0 5px;
-        }
-
-        .create-account {
-            margin-top: 20px;
-            color: white;
-            text-decoration: underline;
-            cursor: pointer;
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h2>Login</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <br>
-                <button type="submit">Login</button>
+    <div class="access-container">
+        <div class="access-box">
+            <h2>Website Access</h2>
+            <p>Do you wish to continue to this website?</p>
+            <form action="/continue" method="POST">
+                <button type="submit">Continue</button>
             </form>
-            <div class="create-account">Create New Account</div>
+            <form action="/decline" method="POST">
+                <button type="submit">No</button>
+            </form>
         </div>
     </div>
 </body>
